@@ -1,0 +1,9 @@
+# Directories to ignore
+fcvod/
+input_videos/
+models/
+output_videos/
+
+# Python cache files
+__pycache__/
+*.pyc
