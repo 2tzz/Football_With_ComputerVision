@@ -73,6 +73,9 @@ class Tracker :
                 elif cls_id == cls_names_inv["referee"] :
                     tracks["referees"][frame_num][track_id] = {"bbox":bbox}
 
+                elif "ball" in cls_names_inv and cls_id == cls_names_inv["ball"]:
+                    tracks["ball"][frame_num][track_id] = {"bbox":bbox}
+
         if stub_path is not None:
             with open(stub_path,'wb') as f:
                 pickle.dump(tracks,f)
@@ -127,7 +130,6 @@ class Tracker :
             for track_id, player in player_dict.items():
                 color = player.get("team_color",(0,0,255))
                 frame = self.draw_ellipse(frame, player["bbox"],color, track_id)
-
 
             # Draw Referee
             for _, referee in referee_dict.items():

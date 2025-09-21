@@ -34,7 +34,7 @@ def main():
     print('Saving Video....')
     #save video
     output_video_frames = tracker.draw_annotations(video_frames, tracks, team_ball_control=None)
-    save_video(output_video_frames, 'output_videos/output_video_test1.avi')
+    save_video(output_video_frames, 'output_videos/output_video_testx.avi')
 
     print('Done')
 
